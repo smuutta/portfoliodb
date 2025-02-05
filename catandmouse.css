@@ -1,0 +1,17 @@
+/* Меняем курсор на фото мышки */
+
+* {
+    cursor: url(604e439c98cf1506f6eea394c98eb285.png), auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Задаём стили для кота */
+  
+  .catImg {
+    width: 150px;
+    height: 150px;
+    transition: 0.2s;
+  }
