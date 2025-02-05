@@ -49,7 +49,7 @@ include 'portfoliodb.php'; // Подключаем файл с функциям�
 openDB(); // Открываем соединение с БД
 
 $sql = "SELECT * FROM projects ORDER BY created_at DESC LIMIT 5"; // Показываем 5 последних проектов
-$result = $link->query($sql); // Используем $link вместо $conn
+$result = $link->query($sql); 
 
 while ($row = $result->fetch_assoc()): ?>
     <div class="project">
