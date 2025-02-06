@@ -42,26 +42,12 @@
         <P>На данный момент я очень интересуюсь изучением HTML, CSS и JS. Конечно навыков у меня совсем мало, но вы можете поиграть в игру с котиком которую я написал изучая JS</P>
         <a href="catandmouse.html" target="_blank" class="button2">Поиграть с котом</a>
       </div>
-      <div class="fade-in card-big">
+      <div class="">
+        <p>Проекты которые я сделал за период обучения<p>
       <?php
-include 'portfoliodb.php'; // Подключаем файл с функциями работы с БД
+include 'functions.php'; 
+echo getProjects();
 
-openDB(); // Открываем соединение с БД
-
-$sql = "SELECT * FROM projects ORDER BY created_at DESC LIMIT 5"; // Показываем 5 последних проектов
-$result = $link->query($sql); 
-
-while ($row = $result->fetch_assoc()): ?>
-    <div class="project">
-        <h2><?= htmlspecialchars($row['title']) ?></h2>
-        <p><?= htmlspecialchars($row['description']) ?></p>
-        <a href="<?= htmlspecialchars($row['link']) ?>" target="_blank">Подробнее</a>
-    </div>
-    <hr>
-<?php endwhile; ?>
-
-<?php
-closeDB(); // Закрываем соединение с БД
 ?>
       </div>
   </section>
