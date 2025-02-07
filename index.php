@@ -1,3 +1,6 @@
+<?php
+include 'functions.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,11 +47,7 @@
       </div>
       <div class="">
         <p>Проекты которые я сделал за период обучения<p>
-      <?php
-include 'functions.php'; 
-echo getProjects();
-
-?>
+      <?php echo getProjects();?>
       </div>
   </section>
 
